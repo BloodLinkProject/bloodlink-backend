@@ -8,12 +8,6 @@ const userModel = require('../models/userModel');
 const { sendDonationReminder } = require("../services/notificationServices");
 const { verifyToken, isAdmin, authConfig } = require('../authMiddleware');
 
-// Admin credentials (should be moved to environment variables in production)
-const ADMIN_CREDENTIALS = {
-    email: 'superadmin@bloodlink.com',
-    passwordHash: '$2b$10$8Zz5JfXyH6eO7jQ9vTcwOeY9J5w8Xz2V1nW3pY4qR5sT6uV7w8XyZ' // Replace with actual hash from bcrypt.hash
-};
-
 
 // Admin login endpoint with server-side validation
 // In your adminRoutes.js
